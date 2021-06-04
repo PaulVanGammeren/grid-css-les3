@@ -1,1 +1,71 @@
-/*Maak hier jouw CSS!*/
+.container {
+    background-color: sandybrown;
+    color: #fff;
+    font: white;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 190px 100px auto 50px;
+    gap: 16px 16px;
+    grid-template-areas:
+    "A C C"
+    "B C C"
+    "B E D"
+    "B E none"
+    "F F F ";
+
+
+}
+
+#header {
+    background-color: darkred;
+    grid-area: A;
+}
+
+#item-b {
+    background-color: darkred;
+    grid-area: B;
+}
+
+#item-c {
+    background-color: darkred;
+    grid-area: C;
+}
+
+#item-d {
+    background-color: darkred;
+    grid-area: D;
+}
+
+#item-e {
+    background-color: darkred;
+    grid-area: E;
+}
+
+#footer {
+    background-color: darkred;
+    grid-area: F;
+}
+#item-g {
+    background: transparent;
+    grid-area: G;
+}
+
+
+ @media screen and (max-width: 576px) {
+        .container {
+
+            grid-template-columns: 1fr;
+            grid-template-rows: 50px auto 50px 50px 50px 50px 50px 50px;
+            gap: 16px;
+            grid-template-areas:
+            "A"
+            "B"
+            "C"
+            "D"
+            "E"
+            "G"
+            "F";
+        }
+
+}
